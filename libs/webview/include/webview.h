@@ -1415,7 +1415,7 @@ private:
       return loaded_lib;
     }
 
-    constexpr std::array<const char *, 2> lib_names{"libwebkit2gtk-4.1.so","libwebkit2gtk-4.0.so","libwebkit2gtk-4.0.so.37"};
+    constexpr std::array<const char *, 3> lib_names{"libwebkit2gtk-4.1.so","libwebkit2gtk-4.0.so","libwebkit2gtk-4.0.so.37"};
     auto found =
         std::find_if(lib_names.begin(), lib_names.end(), [](const char *name) {
           return native_library::is_loaded(name);
